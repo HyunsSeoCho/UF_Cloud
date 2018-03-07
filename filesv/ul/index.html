@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>파일 업로드</title>
+      <meta charset="utf-8">
+  	  <script type="text/javascript" src="./ssl/logout300.js"></script>
+    </head>
+    <body bgcolor="#E8FFFF">
+      <table align="right" width="100%" cellpadding="0" cellspacing="0" style="margin-top:10px;">
+        <tr>
+          <td align="right" width="100%" style="font-size:15pt; font-family:NanumGothic;">
+            <strong><span id="counter"> </span> 후 자동 로그아웃</strong> <input type="button" value="연장" onclick="counter_reset()" style="align='center'; height:30px; width:60px; font-size:14px; font-family:NanumGothic;">
+          </td>
+        </tr>
+      </table>
+      <table align="center" width="100%" cellpadding="0" cellspacing="0" style="margin-top:10px;">
+        <tr>
+          <td align="center" width="100%" style="font-size:15pt; font-family:NanumGothic;">
+            <h2> UniFive Productions™ </h2>
+            <form action="./upload.php" method="post" enctype="multipart/form-data">
+              <fieldset>
+                <legend>Upload</legend>
+                  <input type="hidden" name="MAX_FILE_SIZE" value="2684400000" />
+                  <input type="file" name="userfile" style="text-align:center; font-family:NanumGothic;" multiple>
+                  <input type="submit" value="Upload" style="text-align:center; font-family:NanumGothic;">
+                  <input type="reset" value="Reset" style="text-align:center; font-family:NanumGothic;">
+              </fieldset>
+            </form>
+            <p>
+              <form action="../main.php">
+                <input type="submit" value="Cancel" style="text-align:center; height:28px; width:80px; font-size:13px; font-family:NanumGothic;">
+              </form>
+            </p>
+          </td>
+        </tr>
+      </table>
+      <table align="center" width="100%" cellpadding="0" cellspacing="0" style="margin-top:10px;">
+        <tr>
+          <td align="center" width="100%" style="font-size:10pt; font-family:Dotum; color:#888888;">
+            Copyright &copy; UniFive Productions All Rights Reserved.
+          </td>
+        </tr>
+      </table>
+    </body>
+  </html>
+  <script>
+  counter_init();
+  </script>

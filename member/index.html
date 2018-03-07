@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+  <html>
+    <head>
+      <title>UniFive : 파일서버 로그인</title>
+      <meta charset="utf-8">
+      <link rel="shortcut icon" href="/member/logo.ico">
+      <style type="text/css">
+        html , body { background-color: #E8FFFF; }
+      	div { text-align: center }
+        .title { text-align: center; font-size: 25pt; font-family: Arial; }
+        .desc { text-align: center; font-size: 20pt; font-family: Arial; }
+        .field
+        {
+          text-align: center;
+          border: 2px solid #D4F4FA;
+          border-radius: 10px;
+          box-shadow: 2px 2px 10px 3px gray;
+          background-color: #D4F4FA;
+          font-size:15pt;
+          padding-top: 20px;
+          padding-bottom: 20px;
+          padding-left: 60px;
+          padding-right: 60px;
+          margin: 10px;
+          display: inline-block;
+        }
+        .password
+        {
+          ime-mode: disabled;
+          text-transform: lowercase;
+          text-align:center;
+          height: 30px;
+          width: 140px;
+          font-size: 15px;
+          font-family: Arial;
+        }
+        .select
+        {
+          text-align: center;
+          height: 34px;
+          width: 80px;
+          font-size: 15px;
+          font-family: Arial;
+        }
+        .submit
+        {
+          text-align: center;
+          height: 30px;
+          width: 142px;
+          font-size: 15px;
+          font-family: Arial;
+        }
+        .cancel
+        {
+          text-align: center;
+          height: 25px;
+          width: 70px;
+          font-size: 15px;
+          font-family: Arial;
+        }
+      </style>
+    </head>
+    <body>
+      <br>
+      <div class="title">
+        <p><strong>UniFive Cloud™</strong></p>
+      </div>
+      <br>
+      <div class="desc">
+        Please <strong>Sign In</strong> to your team
+      </div>
+      <br><br>
+      <div>
+        <div class="field">
+          <form action="login.php" method="post">
+            <p>
+              ┌&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="password" class="password" name="pwd" placeholder="Passcode" maxlength="6" min="0" max="999999" autocomplete="off" autofocus="on" onkeyup="javascript:this.value=this.value.toLowerCase();" required>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;┐
+            </p>
+            <p>
+              <select name="team" class="select">
+                <option value="촬영팀">촬영팀</option>
+                <option value="음향팀">음향팀</option>
+                <option value="정보팀">정보팀</option>
+                <option value="편집팀">편집팀</option>
+              </select>
+              <input type="password" class="password" name="tpwd" placeholder="Password" maxlength="20" autocomplete="off" autofocus="off" onkeyup="javascript:this.value=this.value.toLowerCase();" required>
+            </p>
+            <p>
+              └&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" class="submit" value="Sign In">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;┘
+            </p>
+          </form>
+        </div>
+        <br><br>
+        <input type="reset" class="cancel" value="Cancel" onclick="Javascript:location.replace('../');">
+      </div>
+    </body>
+  </html>
